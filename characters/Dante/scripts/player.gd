@@ -36,11 +36,3 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 	
-func _process(delta):
-	if sprite_animation.animation == "Walking_Down":
-		sprite_animation.scale = Vector2(0.7, 0.7)
-	else:
-			if sprite_animation.animation == "Idle_Down":
-				sprite_animation.scale = Vector2(0.9,0.9)
-			else:
-				sprite_animation.scale = Vector2(1, 1)
