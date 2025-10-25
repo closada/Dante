@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://jkn0wca1u47u"]
+[gd_scene load_steps=8 format=4 uid="uid://jkn0wca1u47u"]
 
 [ext_resource type="PackedScene" uid="uid://b3as7ugojrfxp" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://dqdd5wxu8d6ps" path="res://assets/art/1. Limbo/floor/piso_hospital v4.png" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://baf1h0soticnj" path="res://scenes/floor.tscn" id="2_sugp2"]
 [ext_resource type="Texture2D" uid="uid://dec8on6ovjx18" path="res://characters/Dante/sprites/light.png" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bw5pw0qqt46mh" path="res://elevator.tscn" id="5_tbgi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbgi4"]
 texture = ExtResource("1_sugp2")
@@ -25,8 +26,11 @@ tile_set = SubResource("TileSet_tefeu")
 
 [node name="Floor" parent="." instance=ExtResource("2_sugp2")]
 
+[node name="Elevator" parent="." instance=ExtResource("5_tbgi4")]
+position = Vector2(2401, -3811)
+
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(1991, 913)
+position = Vector2(2176, -3307)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 position = Vector2(14.9999, 3)
@@ -38,4 +42,4 @@ texture = ExtResource("4_jyhfs")
 texture_scale = 7.85
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.114897, 0.114897, 0.114897, 0.839216)
+color = Color(0.11, 0.11, 0.11, 1)
