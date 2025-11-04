@@ -1,0 +1,135 @@
+[gd_scene load_steps=3 format=3 uid="uid://byrqywqkuk5ks"]
+
+[ext_resource type="Script" uid="uid://cknlwicf0jgp4" path="res://scenes/menu_opciones.gd" id="1_p5dv2"]
+[ext_resource type="Texture2D" uid="uid://eydwaxy3buh" path="res://assets/art/background_menu/background4.png" id="2_y1dkg"]
+
+[node name="Menu_opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p5dv2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -69.0
+offset_right = 11.0
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_y1dkg")
+expand_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 74.0
+offset_top = 21.0
+offset_right = 1209.0
+offset_bottom = 703.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.745098)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -567.5
+offset_top = -337.5
+offset_right = 567.5
+offset_bottom = 337.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Opciones de sonido"
+horizontal_alignment = 1
+
+[node name="Musica" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/Musica"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Música:"
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/Musica"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="efectos" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/efectos"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Efectos: "
+
+[node name="SFXSlider" type="HSlider" parent="VBoxContainer/efectos"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Idioma" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/Idioma"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Idioma:"
+
+[node name="op" type="HBoxContainer" parent="VBoxContainer/Idioma"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="es" type="Button" parent="VBoxContainer/Idioma/op"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Español"
+
+[node name="in" type="Button" parent="VBoxContainer/Idioma/op"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "Ingles"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Volver atras"
+
+[connection signal="value_changed" from="VBoxContainer/Musica/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/efectos/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

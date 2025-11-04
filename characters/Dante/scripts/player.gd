@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 
 @onready var sprite_animation: AnimatedSprite2D = $AnimatedSprite2D
 
-var move_speed := 200
+var move_speed := 300
 
 var last_direction := "Up"
 

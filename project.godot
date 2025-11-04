@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dante"
-run/main_scene="uid://jkn0wca1u47u"
+run/main_scene="uid://bvew1ckgpnco6"
 config/features=PackedStringArray("4.4", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"

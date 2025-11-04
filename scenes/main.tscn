@@ -55,7 +55,7 @@ tile_set = SubResource("TileSet_tefeu")
 position = Vector2(2528, -3756)
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(4243, -2771)
+position = Vector2(2345, -1840)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 position = Vector2(14.9999, 3)
@@ -72,6 +72,7 @@ color = Color(0.11, 0.11, 0.11, 1)
 [node name="Relics" type="Node2D" parent="."]
 
 [node name="Llavero" type="Node2D" parent="Relics"]
+position = Vector2(-3764, 3394)
 script = ExtResource("8_trceg")
 relic_id = "llavero"
 relic_name = "Llavero casco"
