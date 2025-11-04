@@ -6,10 +6,14 @@ extends Node2D
 @export var pickup_radius: float = 70.0
 
 @onready var area: Area2D = $Area2D
-@onready var sprite: Sprite2D = $Sprite2D
 var glow_light: Light2D = null
 
 func _ready():
+	# Si el Inventory está disponible y la reliquia ya fue recolectada, la eliminamos.
+	if has_node("/root/Inventory"):
+		if Inventory.has_collected(relic_id):
+			queue_free()
+			return
 	# buscar un Light2D en cualquiera de los hijos (recursivo)
 	glow_light = _find_first_light2d(self)
 	# conectar input_event del area

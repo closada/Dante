@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bw5pw0qqt46mh"]
+[gd_scene load_steps=28 format=3 uid="uid://bw5pw0qqt46mh"]
 
 [ext_resource type="Script" uid="uid://cb6sngh2fill8" path="res://scenes/elevator.gd" id="1_pc862"]
 [ext_resource type="Texture2D" uid="uid://cqh3ga2ybv8wn" path="res://assets/art/1. Limbo/elevator/SimpleElevatorDoors_animated_32x48.png" id="1_uuuf0"]
@@ -131,7 +131,7 @@ animations = [{
 size = Vector2(443.5, 223)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pc862"]
-size = Vector2(1161, 462)
+size = Vector2(880, 403)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nreao"]
 atlas = ExtResource("3_a1q2r")
@@ -148,6 +148,45 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_jmdsd"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gisge"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pr5mj"]
+_data = {
+&"RESET": SubResource("Animation_gisge"),
+&"fade_in": SubResource("Animation_jmdsd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmdsd"]
+size = Vector2(101, 92.5)
+
 [node name="Elevator" type="StaticBody2D"]
 script = ExtResource("1_pc862")
 
@@ -162,10 +201,10 @@ autoplay = "Idle"
 position = Vector2(125.75, 100.5)
 shape = SubResource("RectangleShape2D_uuuf0")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D_Detector" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(129.5, 222)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Detector"]
+position = Vector2(132, 192.5)
 shape = SubResource("RectangleShape2D_pc862")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
@@ -173,4 +212,54 @@ position = Vector2(124, -51)
 scale = Vector2(4.25, 4.25)
 sprite_frames = SubResource("SpriteFrames_ym41f")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="UI_FinNivel" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="UI_FinNivel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI_FinNivel/Panel"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 45
+text = "Nivel completado"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonSiguiente" type="Button" parent="UI_FinNivel/Panel"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 300.0
+offset_right = 550.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "Siguiente"
+
+[node name="BotonMenu" type="Button" parent="UI_FinNivel/Panel"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 300.0
+offset_right = 1050.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI_FinNivel"]
+libraries = {
+&"": SubResource("AnimationLibrary_pr5mj")
+}
+
+[node name="Area2D_Inside" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Inside"]
+position = Vector2(117.5, 71.75)
+shape = SubResource("RectangleShape2D_jmdsd")
+
+[connection signal="body_entered" from="Area2D_Detector" to="." method="_on_detector_entered"]
+[connection signal="body_entered" from="Area2D_Inside" to="." method="_on_area_2d_inside_body_entered"]

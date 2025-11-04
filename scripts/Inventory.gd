@@ -139,7 +139,7 @@ func load_from_json() -> void:
 	if typeof(parsed) == TYPE_OBJECT:
 		# intentar acceder a los campos esperados con safe calls
 		# (algunas versiones devuelven un objeto con keys 'error' y 'result')
-		var ok := false
+		var _ok := false
 		if parsed.has_method("get"):
 			# si es un Resource/Wrapper que soporta get, intentamos
 			var maybe_result = null
@@ -172,3 +172,12 @@ func _get_level_name(level_index: int) -> String:
 		8: return "traicion"
 		9: return "dante"
 		_: return "unknown"
+
+# PARA EL TIMER
+func reset_progress():
+	collected.clear()
+	save_data["reliquias"] = []
+	save_data["recuerdos"]["limbo"] = []
+	save_data["mision_completa"] = false
+	save_to_json()
+	print("🔁 Progreso reiniciado.")
