@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://basm0bs4le6hu"]
+
+[ext_resource type="Script" uid="uid://dla185jy2e3fk" path="res://scripts/TutorialUI.gd" id="1_jp6x8"]
+[ext_resource type="Texture2D" uid="uid://dscl4ej75rf68" path="res://characters/Virgilio/virgilio.png" id="2_6gjci"]
+
+[node name="TutorialUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_jp6x8")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 150)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 150.0
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
+custom_minimum_size = Vector2(1129, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Texto de prueba"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="Panel/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_6gjci")
+expand_mode = 2

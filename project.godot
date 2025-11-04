@@ -18,7 +18,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Inventory="*res://scripts/Inventory.gd"
+Inventory="*res://scripts/autoload/Inventory.gd"
+Virgilio="*res://scripts/autoload/Virgilio.gd"
 
 [display]
 

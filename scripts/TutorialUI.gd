@@ -9,20 +9,40 @@ extends CanvasLayer
 ]
 
 var indice := 0
-var player: Node = null
+var custom_text: String = ""
 
 @onready var panel = $Panel
-@onready var label = $Panel/Label
+@onready var portrait = $Panel/HBoxContainer/Portrait
+@onready var label = $Panel/HBoxContainer/Label
 
 func _ready():
+	var virgilio = get_node_or_null("/root/Virgilio")
+	if virgilio:
+		if not virgilio.is_connected("new_message", Callable(self, "_on_new_message")):
+			virgilio.connect("new_message", Callable(self, "_on_new_message"))
+	else:
+		print("⚠️ Virgilio no encontrado en /root/.")
+
 	panel.visible = true
-	label.text = textos[indice]
-	get_tree().paused = true  # pausa el juego mientras se muestra el tutorial
+	portrait.visible = false  # ocultar al inicio
+	label.text = custom_text if custom_text != "" else textos[indice]
+
+	get_tree().paused = true
 	set_process_input(true)
+
+func _on_new_message(texto: String) -> void:
+	panel.visible = true
+	portrait.visible = true  # mostrar retrato de Virgilio cuando habla
+	label.text = texto
+	get_tree().paused = true
+	custom_text = texto
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		avanzar_texto()
+		if custom_text != "":
+			cerrar_tutorial()
+		else:
+			avanzar_texto()
 
 func avanzar_texto():
 	indice += 1
@@ -33,5 +53,7 @@ func avanzar_texto():
 
 func cerrar_tutorial():
 	panel.visible = false
-	get_tree().paused = false  # vuelve a habilitar todo
-	queue_free()  # elimina el nodo si ya no se usa
+	portrait.visible = false
+	get_tree().paused = false
+	custom_text = ""
+	hide()

@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dgy83aq3gjlcb" path="res://assets/art/1. Limbo/reliquias/reloj.png" id="11_jbj1t"]
 [ext_resource type="Script" uid="uid://d3ulpa11dxpen" path="res://scripts/point_light_2d.gd" id="12_eb6dy"]
 [ext_resource type="Script" uid="uid://bopjns3ajv8cp" path="res://scripts/TimerManager.gd" id="13_trceg"]
-[ext_resource type="Script" uid="uid://dla185jy2e3fk" path="res://scripts/TutorialUI.gd" id="14_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://basm0bs4le6hu" path="res://scenes/tutorial_ui.tscn" id="14_a8y0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbgi4"]
 texture = ExtResource("1_sugp2")
@@ -249,28 +249,4 @@ offset_bottom = 450.0
 theme_override_font_sizes/font_size = 30
 text = "Menu"
 
-[node name="TutorialUI" type="CanvasLayer" parent="."]
-process_mode = 3
-script = ExtResource("14_a8y0u")
-
-[node name="Panel" type="Panel" parent="TutorialUI"]
-custom_minimum_size = Vector2(0, 150)
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="TutorialUI/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Texto de prueba"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="TutorialUI" parent="." instance=ExtResource("14_a8y0u")]

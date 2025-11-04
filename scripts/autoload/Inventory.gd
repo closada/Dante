@@ -10,6 +10,15 @@ extends Node
 	"pua_guitarra"
 ]
 
+# Textos asociados a cada reliquia (clave = relic_id)
+var relic_texts := {
+	"cinta_medica": "Tu cinta médica... estás hospitalizado. ¿Qué te pasó, Dante?",
+	"ficha_medica": "Fragmentos de tu informe... coma inducido. Esto no es un sueño.",
+	"llavero": "Un llavero con un casco roto... el accidente.",
+	"reloj_roto": "La hora en que todo se detuvo.",
+	"pua_guitarra": "Tu púa. Tu música. Tal vez todavía haya esperanza."
+}
+
 # Estado runtime: reliquias recolectadas en orden (IDs)
 var collected: Array = []
 
@@ -181,3 +190,24 @@ func reset_progress():
 	save_data["mision_completa"] = false
 	save_to_json()
 	print("🔁 Progreso reiniciado.")
+
+func show_relic_text(relic_id: String) -> void:
+	if not relic_texts.has(relic_id):
+		return
+
+	# si ya hay un tutorial activo, no abrir otro
+	if get_tree().root.has_node("TutorialUI"):
+		return
+
+	var texto = relic_texts[relic_id]
+	var ui_scene: PackedScene = preload("res://scenes/tutorial_ui.tscn")
+	var ui = ui_scene.instantiate()
+	ui.name = "TutorialUI"
+
+	# asignamos el texto antes de agregarlo a la escena
+	ui.custom_text = texto
+
+	# agregamos y configuramos
+	get_tree().root.add_child(ui)
+	ui.set("pause_mode", 2)
+	get_tree().paused = true
