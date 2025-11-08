@@ -211,3 +211,18 @@ func show_relic_text(relic_id: String) -> void:
 	get_tree().root.add_child(ui)
 	ui.set("pause_mode", 2)
 	get_tree().paused = true
+
+# ============================
+# CONFIGURACIÓN (volumen, idioma, etc.)
+# ============================
+
+func get_config(key: String, default_value = null):
+	if save_data.has("configuracion") and save_data["configuracion"].has(key):
+		return save_data["configuracion"][key]
+	return default_value
+
+func set_config(key: String, value):
+	if not save_data.has("configuracion"):
+		save_data["configuracion"] = {}
+	save_data["configuracion"][key] = value
+	save_to_json()

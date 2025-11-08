@@ -15,6 +15,7 @@ var custom_text: String = ""
 @onready var portrait = $Panel/HBoxContainer/Portrait
 @onready var label = $Panel/HBoxContainer/Label
 
+
 func _ready():
 	var virgilio = get_node_or_null("/root/Virgilio")
 	if virgilio:

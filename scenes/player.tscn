@@ -321,3 +321,8 @@ position = Vector2(2, 12)
 shape = SubResource("CapsuleShape2D_i4ail")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -608
+limit_top = -6640
+limit_right = 5712
+limit_bottom = 1536
+position_smoothing_enabled = true
