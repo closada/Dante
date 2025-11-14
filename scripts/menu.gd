@@ -9,10 +9,12 @@ func _ready():
 		MusicManager.play_music(music_path)
 
 func _on_jugar_pressed() -> void:
+	SFXManager.play("click")
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 
 func _on_opciones_pressed() -> void:
+	SFXManager.play("click")
 	get_tree().change_scene_to_file("res://scenes/menu_opciones.tscn")
 
 

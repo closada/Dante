@@ -47,6 +47,8 @@ func _try_pickup():
 		"name": relic_name,
 		"description": relic_description
 	}):
+		# al levantar la reliquia, SFX:
+		SFXManager.play("relic_pickup")
 		# Mostrar mensaje de Virgilio asociado a esta reliquia
 		var virgilio = get_node_or_null("/root/Virgilio")
 		if virgilio:

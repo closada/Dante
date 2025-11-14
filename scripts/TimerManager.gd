@@ -94,6 +94,7 @@ func _tiempo_agotado():
 	print("⏰ Tiempo agotado, fin del nivel")
 
 func _on_reintentar_pressed():
+	SFXManager.play("click")
 	print("🔁 Reiniciando partida...")
 	var inv = get_node_or_null("/root/Inventory")
 	if inv:
@@ -102,6 +103,7 @@ func _on_reintentar_pressed():
 	get_tree().reload_current_scene()
 
 func _on_menu_pressed():
+	SFXManager.play("click")
 	print("🏠 Volviendo al menú principal...")
 	var inv = get_node_or_null("/root/Inventory")
 	if inv:
@@ -111,6 +113,7 @@ func _on_menu_pressed():
 
 # --- BOTONES DE PAUSA Y VIRGILIO ---
 func _on_pausa_pressed():
+	SFXManager.play("click")
 	if get_tree().paused:
 		get_tree().paused = false
 		pausado = false
@@ -123,6 +126,7 @@ func _on_pausa_pressed():
 		print("⏸️ Juego pausado")
 
 func _on_virgilio_pressed():
+	SFXManager.play("click")
 	var virgilio = get_node_or_null("/root/Virgilio")
 	if virgilio:
 		virgilio.repetir_ultimo_mensaje()
@@ -136,6 +140,7 @@ func _formatear_tiempo(segundos: int) -> String:
 	return "%02d:%02d" % [m, s]
 
 func _on_reanudar_pressed() -> void:
+	SFXManager.play("click")
 	print("▶️ Reanudando partida...")
 	
 	# Asegurarse de que el panel de pausa o game over no quede visible

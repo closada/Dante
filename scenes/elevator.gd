@@ -40,6 +40,7 @@ func _check_open_condition() -> void:
 
 # --- Lógica de apertura del ascensor ---
 func _open_elevator() -> void:
+	SFXManager.play("elevator_open")
 	is_open = true
 	anim.play("Open")
 	await anim.animation_finished
@@ -50,6 +51,8 @@ func _open_elevator() -> void:
 func _on_detector_entered(body: Node) -> void:
 	if body is CharacterBody2D and Inventory.is_mission_complete() and not is_open:
 		_open_elevator()
+		
+
 
 func _on_inside_exited(body: Node) -> void:
 	if body is CharacterBody2D:
@@ -70,10 +73,12 @@ func _show_fin_nivel_ui() -> void:
 	get_tree().paused = true
 
 func _on_menu_pressed() -> void:
+	SFXManager.play("click")
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func _on_next_pressed() -> void:
+	SFXManager.play("click")
 	get_tree().paused = false
 	print("Próximo nivel (por ahora sin funcionalidad)")
 

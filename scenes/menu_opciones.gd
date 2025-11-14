@@ -28,4 +28,5 @@ func _on_sfx_slider_value_changed(value: float) -> void:
 		print("guardo el valor en json")
 
 func _on_button_pressed() -> void:
+	SFXManager.play("click")
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")

@@ -32,7 +32,9 @@ func _ready():
 
 
 	call_deferred("_add_player_safe")
-	player.connect("finished", Callable(self, "_on_player_finished"))
+	if not player.is_connected("finished", Callable(self, "_on_player_finished")):
+		player.connect("finished", Callable(self, "_on_player_finished"))
+
 
 	print("🎵 MusicManager inicializado: música=", volumen_actual, " | efectos=", volumen_sfx)
 
