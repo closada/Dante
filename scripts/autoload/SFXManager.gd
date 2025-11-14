@@ -27,6 +27,7 @@ func play(sfx_name: String) -> void:
 
 	get_tree().root.add_child(sound)
 	sound.play()
+	print("sonando... ", sfx_name)
 
 	# 🔹 Liberarlo automáticamente cuando termine
 	sound.finished.connect(func():

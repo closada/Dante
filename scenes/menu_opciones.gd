@@ -21,11 +21,7 @@ func _on_music_slider_value_changed(value: float) -> void:
 	MusicManager.set_volume(value)
 
 func _on_sfx_slider_value_changed(value: float) -> void:
-	var db = linear_to_db(value)
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), db)
-	if has_node("/root/Inventory"):
-		get_node("/root/Inventory").set_config("efectos", value)
-		print("guardo el valor en json")
+	MusicManager.set_sfx_volume(value)
 
 func _on_button_pressed() -> void:
 	SFXManager.play("click")
