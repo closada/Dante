@@ -25,7 +25,7 @@ func _ready():
 		print("⚠️ Virgilio no encontrado en /root/.")
 
 	panel.visible = true
-	portrait.visible = false  # ocultar al inicio
+	portrait.visible = true  # ocultar al inicio
 	label.text = custom_text if custom_text != "" else textos[indice]
 
 	get_tree().paused = true

@@ -57,6 +57,22 @@ func _try_pickup():
 			print("⚠️ Virgilio no encontrado en /root/")
 
 		queue_free()  # eliminar la reliquia del nivel
+		
+		#################### en este apartado vamos a ir mostrando las pistas ################
+		# mostramos las pistas de la ficha tecnica si fue la cinta:
+		if relic_id == "cinta_medica":
+			var papers = get_tree().root.get_node("Main/Paper")
+			if papers:
+				papers.visible = true
+			else:
+				print("⚠️ No se encontró TileMap_Papeles")
+				
+		if relic_id == "ficha_medica":
+			var moto = get_tree().root.get_node("Main/Motorbike")
+			if moto:
+				moto.visible = true
+			else:
+				print("⚠️ No se encontró TileMap_moto")		
 	else:
 		print("❌ No se pudo recoger (no era la reliquia esperada):", relic_id)
 

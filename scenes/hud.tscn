@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bopjns3ajv8cp" path="res://scripts/TimerManager.gd" id="1_5ysmq"]
 [ext_resource type="Texture2D" uid="uid://bldakb2hgggl0" path="res://assets/art/btn_pause.png" id="1_oo0fn"]
-[ext_resource type="Texture2D" uid="uid://bhl5t68v8k6v8" path="res://characters/Virgilio/virgilio2.png" id="2_5ysmq"]
+[ext_resource type="Texture2D" uid="uid://bb3of2acpemj2" path="res://characters/Virgilio/virgilio3.png" id="3_5ysmq"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
@@ -44,7 +44,7 @@ layout_mode = 2
 size_flags_horizontal = 10
 tooltip_text = "Virgilio"
 focus_mode = 0
-texture_normal = ExtResource("2_5ysmq")
+texture_normal = ExtResource("3_5ysmq")
 ignore_texture_size = true
 stretch_mode = 5
 

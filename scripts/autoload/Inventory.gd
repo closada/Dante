@@ -55,6 +55,12 @@ func get_active_relic_id() -> String:
 		return ordered_relics[next_index]
 	return ""
 
+func get_active_relic_id_num() -> int:
+	var next_index = collected.size()
+	if next_index < ordered_relics.size():
+		return next_index
+	return -1
+
 # Comprueba si el id es la reliquia activa
 func is_relic_active(relic_id: String) -> bool:
 	return (not has_collected(relic_id)) and (get_active_relic_id() == relic_id)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://basm0bs4le6hu"]
 
 [ext_resource type="Script" uid="uid://dla185jy2e3fk" path="res://scripts/TutorialUI.gd" id="1_jp6x8"]
-[ext_resource type="Texture2D" uid="uid://bhl5t68v8k6v8" path="res://characters/Virgilio/virgilio2.png" id="2_6gjci"]
+[ext_resource type="Texture2D" uid="uid://bb3of2acpemj2" path="res://characters/Virgilio/virgilio3.png" id="2_6gjci"]
 
 [node name="TutorialUI" type="CanvasLayer"]
 process_mode = 3
