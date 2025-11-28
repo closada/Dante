@@ -1,12 +1,14 @@
-[gd_scene load_steps=13 format=4 uid="uid://jkn0wca1u47u"]
+[gd_scene load_steps=15 format=4 uid="uid://jkn0wca1u47u"]
 
 [ext_resource type="PackedScene" uid="uid://b3as7ugojrfxp" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://dqdd5wxu8d6ps" path="res://assets/art/1. Limbo/floor/piso_hospital v4.png" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://baf1h0soticnj" path="res://scenes/floor.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b861ssfh3eygv" path="res://scenes/clues/paper.tscn" id="3_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bnsdursexddno" path="res://scenes/clues/tictac.tscn" id="3_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://cowas73fgwowb" path="res://scripts/clues/motorbike.tscn" id="4_choun"]
 [ext_resource type="Texture2D" uid="uid://dec8on6ovjx18" path="res://characters/Dante/sprites/light.png" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bw5pw0qqt46mh" path="res://scenes/elevator.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://rfxj06mr0n68" path="res://scenes/clues/ride.tscn" id="5_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://bu8ay102afkod" path="res://scenes/relics/relics.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://basm0bs4le6hu" path="res://scenes/tutorial_ui.tscn" id="14_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://daryg6b4ts4x5" path="res://scenes/hud.tscn" id="14_jkv2x"]
@@ -35,6 +37,8 @@ tile_set = SubResource("TileSet_tefeu")
 
 [node name="Motorbike" parent="." instance=ExtResource("4_choun")]
 
+[node name="Ride" parent="." instance=ExtResource("5_ya4ey")]
+
 [node name="Floor" parent="." instance=ExtResource("2_sugp2")]
 
 [node name="Elevator" parent="." instance=ExtResource("5_tbgi4")]
@@ -58,3 +62,5 @@ color = Color(0.11, 0.11, 0.11, 1)
 [node name="Relics" parent="." instance=ExtResource("7_tipki")]
 
 [node name="TutorialUI" parent="." instance=ExtResource("14_a8y0u")]
+
+[node name="Tictac" parent="." instance=ExtResource("3_eb6dy")]

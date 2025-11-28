@@ -22,6 +22,7 @@ Inventory="*res://scripts/autoload/Inventory.gd"
 Virgilio="*res://scripts/autoload/Virgilio.gd"
 MusicManager="*res://scripts/autoload/MusicManager.gd"
 SFXManager="*res://scripts/autoload/SFXManager.gd"
+TicTacController="*res://scripts/autoload/TicTacController.gd"
 
 [display]
 

@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnsdursexddno"]
+
+[ext_resource type="Script" uid="uid://6nfytxes14yt" path="res://scripts/clues/tictac.gd" id="1_hjuhd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjuhd"]
+size = Vector2(267, 59.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfcj8"]
+size = Vector2(1017.5, 112.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qabym"]
+size = Vector2(190, 1108.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0r12"]
+size = Vector2(561, 106)
+
+[node name="Tictac" type="Node2D"]
+script = ExtResource("1_hjuhd")
+
+[node name="Area2D2" type="Area2D" parent="." groups=["tic_tac_zone_1"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(608.5, 687.75)
+shape = SubResource("RectangleShape2D_hjuhd")
+
+[node name="Area2D" type="Area2D" parent="." groups=["tic_tac_zone_1"]]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(964, -409)
+shape = SubResource("RectangleShape2D_hfcj8")
+
+[node name="Area2D3" type="Area2D" parent="." groups=["tic_tac_zone_2"]]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(951, -2236)
+shape = SubResource("RectangleShape2D_hfcj8")
+
+[node name="Area2D4" type="Area2D" parent="." groups=["tic_tac_zone_2"]]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(951, -3585)
+shape = SubResource("RectangleShape2D_hfcj8")
+
+[node name="Area2D5" type="Area2D" parent="." groups=["tic_tac_zone_3"]]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2(1555, -5231.63)
+shape = SubResource("RectangleShape2D_qabym")
+
+[node name="Area2D6" type="Area2D" parent="." groups=["tic_tac_zone_4"]]
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D6"]
+position = Vector2(2542.5, -4712)
+shape = SubResource("RectangleShape2D_v0r12")

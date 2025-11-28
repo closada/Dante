@@ -14,4 +14,4 @@ func _refresh_visibility():
 	print("Pista: la siguiente reliquia es ID:", next_id_num)
 
 	# mostrar pista SI número > 1
-	visible = next_id_num > 1
+	visible = next_id_num == 2
