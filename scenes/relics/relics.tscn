@@ -108,6 +108,7 @@ position = Vector2(-19.2753, 43.3695)
 shape = SubResource("CapsuleShape2D_trceg")
 
 [node name="Pua_guitarra" type="Node2D" parent="."]
+position = Vector2(48, -27)
 script = ExtResource("1_ccsjf")
 relic_id = "pua_guitarra"
 relic_name = "Pua de guitarra rota"
@@ -128,7 +129,7 @@ script = ExtResource("4_7fo22")
 [node name="Area2D" type="Area2D" parent="Pua_guitarra"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pua_guitarra/Area2D"]
-position = Vector2(5050, -5300)
+position = Vector2(5045, -5300)
 shape = SubResource("CircleShape2D_a8y0u")
 
 [node name="Reloj_roto" type="Node2D" parent="."]
