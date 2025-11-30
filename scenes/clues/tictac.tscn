@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnsdursexddno"]
+[gd_scene load_steps=7 format=3 uid="uid://bnsdursexddno"]
 
 [ext_resource type="Script" uid="uid://6nfytxes14yt" path="res://scripts/clues/tictac.gd" id="1_hjuhd"]
 
@@ -13,6 +13,9 @@ size = Vector2(190, 1108.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0r12"]
 size = Vector2(561, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0rwg"]
+size = Vector2(790.25, 119)
 
 [node name="Tictac" type="Node2D"]
 script = ExtResource("1_hjuhd")
@@ -52,3 +55,9 @@ shape = SubResource("RectangleShape2D_qabym")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D6"]
 position = Vector2(2542.5, -4712)
 shape = SubResource("RectangleShape2D_v0r12")
+
+[node name="Area2D7" type="Area2D" parent="." groups=["tic_tac_zone_1"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D7"]
+position = Vector2(868.875, 56)
+shape = SubResource("RectangleShape2D_w0rwg")

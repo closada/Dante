@@ -12,7 +12,7 @@ func _ready() -> void:
 		music_slider.value = MusicManager.volumen_actual
 		sfx_slider.value = vol_sfx
 		# Aplicar a los buses al iniciar
-		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(vol_musica))
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("MasterMusic"), linear_to_db(vol_musica))
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(vol_sfx))
 		
 		

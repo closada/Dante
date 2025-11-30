@@ -18,12 +18,12 @@ func _ready():
 	# 🔊 Aplicar volúmenes iniciales a los buses
 	var db_music = linear_to_db(volumen_actual)
 	var db_sfx = linear_to_db(volumen_sfx)
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), db_music)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("MasterMusic"), db_music)
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), db_sfx)
 	
 	# 🎧 Crear el AudioStreamPlayer para la música
 	player = AudioStreamPlayer.new()
-	player.bus = "Master"
+	player.bus = "MasterMusic"
 	player.volume_db = db_music
 	player.autoplay = false
 	player.process_mode = Node.PROCESS_MODE_ALWAYS  # 🔹 mantiene el procesamiento aún en pausa
@@ -90,7 +90,7 @@ func set_volume(value: float):
 	var db = linear_to_db(volumen_actual)
 	if player:
 		player.volume_db = db
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), db)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("MasterMusic"), db)
 
 	var inv = get_node_or_null("/root/Inventory")
 	if inv:

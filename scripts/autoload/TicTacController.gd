@@ -15,7 +15,7 @@ const TICTAC_SOUNDS := {
 }
 
 func _ready():
-	player.bus = "SFX"
+	player.bus = "Master"
 	player.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(player)
 	print("🔊 TicTacController listo.")
