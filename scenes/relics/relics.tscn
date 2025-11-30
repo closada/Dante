@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bu8ay102afkod"]
+[gd_scene load_steps=16 format=3 uid="uid://bu8ay102afkod"]
 
 [ext_resource type="Script" uid="uid://scvtpi10lgn3" path="res://scenes/relics/relic.gd" id="1_ccsjf"]
 [ext_resource type="Texture2D" uid="uid://hksjmuvwh6jf" path="res://assets/art/1. Limbo/reliquias/llavero.png" id="2_vlgmj"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cuki22g4mm3jf" path="res://assets/art/1. Limbo/reliquias/ficha_medica.png" id="6_ntfmf"]
 [ext_resource type="Texture2D" uid="uid://cbvop52h1gqpk" path="res://assets/art/1. Limbo/reliquias/pua.png" id="7_vt4pd"]
 [ext_resource type="Texture2D" uid="uid://dgy83aq3gjlcb" path="res://assets/art/1. Limbo/reliquias/reloj.png" id="8_u8qef"]
+[ext_resource type="Texture2D" uid="uid://jkf776wbwco7" path="res://assets/art/1. Limbo/reliquias/partitura.png" id="9_vlgmj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_choun"]
 radius = 315.078
@@ -26,6 +27,9 @@ radius = 48.3011
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jkv2x"]
 radius = 86.0058
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjumb"]
+radius = 65.192
 
 [node name="Relics" type="Node2D"]
 
@@ -155,3 +159,28 @@ script = ExtResource("4_7fo22")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Reloj_roto/Area2D"]
 position = Vector2(3307, -4536)
 shape = SubResource("CircleShape2D_jkv2x")
+
+[node name="Partitura" type="Node2D" parent="."]
+position = Vector2(2, 4)
+script = ExtResource("1_ccsjf")
+relic_id = "partitura"
+relic_name = "Partitura rota"
+relic_description = "Partitura rota"
+
+[node name="Partitura" type="Sprite2D" parent="Partitura"]
+position = Vector2(4476.67, -1087.33)
+scale = Vector2(0.141937, 0.141937)
+texture = ExtResource("9_vlgmj")
+
+[node name="PointLight2D" type="PointLight2D" parent="Partitura/Partitura"]
+position = Vector2(-7.04526, -35.2268)
+scale = Vector2(1.93867, 1.89018)
+texture = ExtResource("3_vjumb")
+script = ExtResource("4_7fo22")
+
+[node name="Area2D" type="Area2D" parent="Partitura"]
+position = Vector2(4479.67, -1082.33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Partitura/Area2D"]
+position = Vector2(-10, -11)
+shape = SubResource("CircleShape2D_vjumb")

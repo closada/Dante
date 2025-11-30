@@ -7,7 +7,11 @@ extends Node
 	"ficha_medica",
 	"llavero",
 	"reloj_roto",
-	"pua_guitarra"
+	"pua_guitarra",
+	"partitura",
+	"foto_quemada",
+	"celular",
+	"pluma"
 ]
 
 # Textos asociados a cada reliquia (clave = relic_id)
@@ -16,7 +20,11 @@ var relic_texts := {
 	"ficha_medica": "Fragmentos de tu informe... coma inducido. Esto no es un sueño.",
 	"llavero": "Un llavero con un casco roto... el accidente.",
 	"reloj_roto": "La hora en que todo se detuvo.",
-	"pua_guitarra": "Tu púa. Tu música. Tal vez todavía haya esperanza."
+	"pua_guitarra": "Tu púa. Tu música. Tal vez todavía haya esperanza.",
+	"partitura": "",
+	"foto_quemada": "",
+	"celular": "",
+	"pluma": ""
 }
 
 # Estado runtime: reliquias recolectadas en orden (IDs)

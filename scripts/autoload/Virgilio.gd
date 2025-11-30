@@ -15,6 +15,10 @@ var mensajes := {
 	"llavero": "Un llavero con un casco roto... el accidente.",
 	"reloj_roto": "La hora en que todo se detuvo.",
 	"pua_guitarra": "Tu púa. Tu música.",
+	"partitura": "",
+	"foto_quemada": "",
+	"celular": "",
+	"pluma": "",
 	"ascensor": "Has superado la primera prueba... pero el juicio continúa.",
 	"tiempo_bajo": "¡Apurate, Dante! El tiempo se está agotando..."
 }
