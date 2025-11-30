@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bu8ay102afkod"]
+[gd_scene load_steps=22 format=3 uid="uid://bu8ay102afkod"]
 
 [ext_resource type="Script" uid="uid://scvtpi10lgn3" path="res://scenes/relics/relic.gd" id="1_ccsjf"]
 [ext_resource type="Texture2D" uid="uid://hksjmuvwh6jf" path="res://assets/art/1. Limbo/reliquias/llavero.png" id="2_vlgmj"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cbvop52h1gqpk" path="res://assets/art/1. Limbo/reliquias/pua.png" id="7_vt4pd"]
 [ext_resource type="Texture2D" uid="uid://dgy83aq3gjlcb" path="res://assets/art/1. Limbo/reliquias/reloj.png" id="8_u8qef"]
 [ext_resource type="Texture2D" uid="uid://jkf776wbwco7" path="res://assets/art/1. Limbo/reliquias/partitura.png" id="9_vlgmj"]
+[ext_resource type="Texture2D" uid="uid://dnuyxrhiwbnui" path="res://assets/art/1. Limbo/reliquias/foto.png" id="10_vjumb"]
+[ext_resource type="Texture2D" uid="uid://qy3wve5kny5a" path="res://assets/art/1. Limbo/reliquias/celular.png" id="11_7fo22"]
+[ext_resource type="Texture2D" uid="uid://mbwmqr48ju7x" path="res://assets/art/1. Limbo/reliquias/pluma.png" id="12_ryso8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_choun"]
 radius = 315.078
@@ -30,6 +33,15 @@ radius = 86.0058
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vjumb"]
 radius = 65.192
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fo22"]
+size = Vector2(97, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryso8"]
+size = Vector2(698.62, 880.282)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntfmf"]
+size = Vector2(105.5, 171.5)
 
 [node name="Relics" type="Node2D"]
 
@@ -184,3 +196,76 @@ position = Vector2(4479.67, -1082.33)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Partitura/Area2D"]
 position = Vector2(-10, -11)
 shape = SubResource("CircleShape2D_vjumb")
+
+[node name="Foto" type="Node2D" parent="."]
+position = Vector2(4956, 780)
+script = ExtResource("1_ccsjf")
+relic_id = "foto_quemada"
+relic_name = "foto_quemada"
+relic_description = "foto_quemada"
+
+[node name="Foto" type="Sprite2D" parent="Foto"]
+position = Vector2(203, 60)
+scale = Vector2(0.142, 0.142)
+texture = ExtResource("10_vjumb")
+
+[node name="PointLight2D" type="PointLight2D" parent="Foto/Foto"]
+position = Vector2(-7.04224, 0)
+scale = Vector2(1.32042, 1.32042)
+texture = ExtResource("3_vjumb")
+script = ExtResource("4_7fo22")
+
+[node name="Area2D" type="Area2D" parent="Foto"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foto/Area2D"]
+position = Vector2(204, 65)
+shape = SubResource("RectangleShape2D_7fo22")
+
+[node name="Celular" type="Node2D" parent="."]
+scale = Vector2(0.142, 0.142)
+script = ExtResource("1_ccsjf")
+relic_id = "celular"
+relic_name = "celular"
+relic_description = "celular"
+
+[node name="Celular" type="Sprite2D" parent="Celular"]
+position = Vector2(2314.82, -22537.3)
+texture = ExtResource("11_7fo22")
+
+[node name="PointLight2D" type="PointLight2D" parent="Celular/Celular"]
+position = Vector2(-12, -61.2981)
+scale = Vector2(2.75776, 2.57207)
+texture = ExtResource("3_vjumb")
+script = ExtResource("4_7fo22")
+
+[node name="Area2D" type="Area2D" parent="Celular"]
+position = Vector2(2350.03, -22558.4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Celular/Area2D"]
+position = Vector2(-33.1265, 23.2151)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ryso8")
+
+[node name="Pluma" type="Node2D" parent="."]
+position = Vector2(3839, -1602)
+script = ExtResource("1_ccsjf")
+relic_id = "pluma"
+relic_name = "pluma"
+relic_description = "pluma"
+
+[node name="Pluma" type="Sprite2D" parent="Pluma"]
+position = Vector2(-2, -3.00001)
+scale = Vector2(0.191117, 0.191117)
+texture = ExtResource("12_ryso8")
+
+[node name="PointLight2D" type="PointLight2D" parent="Pluma/Pluma"]
+position = Vector2(5.23263, -31.3944)
+scale = Vector2(3.35711, 2.83592)
+texture = ExtResource("3_vjumb")
+script = ExtResource("4_7fo22")
+
+[node name="Area2D" type="Area2D" parent="Pluma"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pluma/Area2D"]
+position = Vector2(2.75, -3.75)
+shape = SubResource("RectangleShape2D_ntfmf")
