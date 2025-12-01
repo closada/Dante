@@ -28,7 +28,7 @@ texture = ExtResource("2_lpwwq")
 
 [node name="PointLight2D" type="PointLight2D" parent="2"]
 position = Vector2(443.92, 332.417)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_lpwwq")
 
 [node name="3" type="Node2D" parent="."]
@@ -40,7 +40,7 @@ texture = ExtResource("2_lpwwq")
 
 [node name="PointLight2D" type="PointLight2D" parent="3"]
 position = Vector2(438.07, 542.667)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_lpwwq")
 
 [node name="4" type="Node2D" parent="."]
@@ -64,7 +64,7 @@ texture = ExtResource("2_lpwwq")
 
 [node name="PointLight2D" type="PointLight2D" parent="5"]
 position = Vector2(450.07, 948.667)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_lpwwq")
 
 [node name="6" type="Node2D" parent="."]
@@ -88,7 +88,7 @@ texture = ExtResource("2_lpwwq")
 
 [node name="PointLight2D" type="PointLight2D" parent="7"]
 position = Vector2(443.918, 1371.17)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_lpwwq")
 
 [node name="8" type="Node2D" parent="."]
@@ -112,7 +112,7 @@ texture = ExtResource("2_lpwwq")
 
 [node name="PointLight2D" type="PointLight2D" parent="9"]
 position = Vector2(466.918, 1773.17)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_lpwwq")
 
 [node name="10" type="Node2D" parent="."]
@@ -136,5 +136,5 @@ texture = ExtResource("2_lpwwq")
 
 [node name="PointLight2D" type="PointLight2D" parent="11"]
 position = Vector2(913.918, 1847.17)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_lpwwq")

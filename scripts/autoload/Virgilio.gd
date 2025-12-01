@@ -17,7 +17,7 @@ var mensajes := {
 	"pua_guitarra": "Tu púa. Tu música.",
 	"partitura": "La música no desapareció Dante...",
 	"foto_quemada": "Te estaban esperando, Dante. Ibas a verlos.",
-	"celular": "Sonó. No lo atendiste. Y todo cambió, Dante… en un solo parpadeo.",
+	"celular": "Sonó. No lo atendiste.",
 	"pluma": "Has superado la primera prueba... pero el juicio continúa.",
 	"ascensor": "Has superado la primera prueba... pero el juicio continúa.",
 	"tiempo_bajo": "¡Apurate, Dante! El tiempo se está agotando..."

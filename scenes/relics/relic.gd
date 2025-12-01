@@ -77,6 +77,22 @@ func _try_pickup():
 		# cuando ya no es mas la partitura, vuelve la musica		
 		if relic_id == "partitura":
 			MusicManager.fade_in_music(1.0)
+			
+		if relic_id == "celular":
+			var shadow = find_anywhere("ShadowHint")
+			if shadow:
+				print("Encontrado:", shadow.get_path())
+				shadow.activate()
+			else:
+				print("NO se encontró ShadowHint")
+		
+		if relic_id == "pluma":
+			var shadow = get_tree().root.get_node("Main/ShadowHint")
+			if shadow:
+				shadow.visible = false
+			else:
+				print("error encontrando ShadowHint!")
+			
 
 	else:
 		print("❌ No se pudo recoger (no era la reliquia esperada):", relic_id)
@@ -107,4 +123,17 @@ func _find_first_light2d(node: Node) -> Light2D:
 		var found = _find_first_light2d(child)
 		if found:
 			return found
+	return null
+
+func find_anywhere(name:String) -> Node:
+	var root = get_tree().get_root()
+	return _search_recursive(root, name)
+
+func _search_recursive(node:Node, name:String) -> Node:
+	if node.name == name:
+		return node
+	for child in node.get_children():
+		var result = _search_recursive(child, name)
+		if result:
+			return result
 	return null

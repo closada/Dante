@@ -123,14 +123,14 @@ func _on_player_finished():
 		player.play()
 
 func fade_out_music(duration := 1.0):
-	var start = volumen_actual
-	var t := 0.0
+	var _start = volumen_actual
+	var _t := 0.0
 	var tween = get_tree().create_tween()
 
 	tween.tween_method(self._set_music_volume_percent, 1.0, 0.0, duration)
 
 func fade_in_music(duration := 1.0):
-	var target = volumen_actual
+	var _target = volumen_actual
 	var tween = get_tree().create_tween()
 	tween.tween_method(self._set_music_volume_percent, 0.0, 1.0, duration)
 

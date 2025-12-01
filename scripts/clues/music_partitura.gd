@@ -113,7 +113,7 @@ func _start_other_player():
 # ======================================================
 #            VOLUMEN SEGÚN DISTANCIA
 # ======================================================
-func _process(delta):
+func _process(_delta):
 	
 	# fade out música solo una vez
 	if not baja_musica and Inventory.get_active_relic_id_num() == relic_number:
