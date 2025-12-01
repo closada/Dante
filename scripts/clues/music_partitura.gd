@@ -116,7 +116,7 @@ func _start_other_player():
 func _process(delta):
 	
 	# fade out música solo una vez
-	if not baja_musica:
+	if not baja_musica and Inventory.get_active_relic_id_num() == relic_number:
 		MusicManager.fade_out_music(1.0)
 		baja_musica = true
 		

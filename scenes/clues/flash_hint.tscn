@@ -1,0 +1,140 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkxhedl7xypr5"]
+
+[ext_resource type="Script" uid="uid://dih5dmbhaneks" path="res://scripts/clues/flash_hint.gd" id="1_314hu"]
+[ext_resource type="Texture2D" uid="uid://xmx63a0cqf2n" path="res://assets/art/1. Limbo/clues/flash.png" id="2_lpwwq"]
+
+[node name="FlashHint" type="Node2D"]
+position = Vector2(4009, -1006)
+script = ExtResource("1_314hu")
+
+[node name="1" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="1"]
+position = Vector2(442.85, 101.75)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="1"]
+position = Vector2(435.768, 98.9172)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="2" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="2"]
+position = Vector2(451.002, 335.25)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="2"]
+position = Vector2(443.92, 332.417)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="3" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="3"]
+position = Vector2(445.152, 545.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="3"]
+position = Vector2(438.07, 542.667)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="4" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="4"]
+position = Vector2(451.152, 751.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="4"]
+position = Vector2(444.07, 748.667)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="5" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="5"]
+position = Vector2(457.152, 951.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="5"]
+position = Vector2(450.07, 948.667)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="6" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="6"]
+position = Vector2(451.152, 1173.5)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="6"]
+position = Vector2(444.07, 1170.67)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="7" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="7"]
+position = Vector2(451, 1374)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="7"]
+position = Vector2(443.918, 1371.17)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="8" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="8"]
+position = Vector2(468, 1596)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="8"]
+position = Vector2(460.918, 1593.17)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="9" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="9"]
+position = Vector2(474, 1776)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="9"]
+position = Vector2(466.918, 1773.17)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="10" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="10"]
+position = Vector2(705, 1850)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="10"]
+position = Vector2(697.918, 1847.17)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="11" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="11"]
+position = Vector2(921, 1850)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
+
+[node name="PointLight2D" type="PointLight2D" parent="11"]
+position = Vector2(913.918, 1847.17)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lpwwq")
