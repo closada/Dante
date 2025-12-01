@@ -73,6 +73,11 @@ func _try_pickup():
 				moto.visible = true
 			else:
 				print("⚠️ No se encontró TileMap_moto")		
+				
+		# cuando ya no es mas la partitura, vuelve la musica		
+		if relic_id == "partitura":
+			MusicManager.fade_in_music(1.0)
+
 	else:
 		print("❌ No se pudo recoger (no era la reliquia esperada):", relic_id)
 

@@ -45,7 +45,7 @@ size = Vector2(105.5, 171.5)
 
 [node name="Relics" type="Node2D"]
 
-[node name="Llavero" type="Node2D" parent="."]
+[node name="Llavero" type="Node2D" parent="." groups=["relics"]]
 position = Vector2(-3764, 3394)
 script = ExtResource("1_ccsjf")
 relic_id = "llavero"
@@ -73,7 +73,7 @@ scale = Vector2(0.114258, 0.114258)
 position = Vector2(43.7606, 0)
 shape = SubResource("CapsuleShape2D_choun")
 
-[node name="Cinta_medica" type="Node2D" parent="."]
+[node name="Cinta_medica" type="Node2D" parent="." groups=["relics"]]
 script = ExtResource("1_ccsjf")
 relic_id = "cinta_medica"
 relic_name = "Cinta de admision medica"
@@ -97,7 +97,7 @@ script = ExtResource("4_7fo22")
 position = Vector2(2809, -1843)
 shape = SubResource("CapsuleShape2D_eb6dy")
 
-[node name="Ficha_medica" type="Node2D" parent="."]
+[node name="Ficha_medica" type="Node2D" parent="." groups=["relics"]]
 script = ExtResource("1_ccsjf")
 relic_id = "ficha_medica"
 relic_name = "Ficha medica"
@@ -123,7 +123,7 @@ scale = Vector2(0.207519, 0.207519)
 position = Vector2(-19.2753, 43.3695)
 shape = SubResource("CapsuleShape2D_trceg")
 
-[node name="Pua_guitarra" type="Node2D" parent="."]
+[node name="Pua_guitarra" type="Node2D" parent="." groups=["relics"]]
 position = Vector2(48, -27)
 script = ExtResource("1_ccsjf")
 relic_id = "pua_guitarra"
@@ -148,7 +148,7 @@ script = ExtResource("4_7fo22")
 position = Vector2(5045, -5300)
 shape = SubResource("CircleShape2D_a8y0u")
 
-[node name="Reloj_roto" type="Node2D" parent="."]
+[node name="Reloj_roto" type="Node2D" parent="." groups=["relics"]]
 script = ExtResource("1_ccsjf")
 relic_id = "reloj_roto"
 relic_name = "Reloj roto"
@@ -172,32 +172,32 @@ script = ExtResource("4_7fo22")
 position = Vector2(3307, -4536)
 shape = SubResource("CircleShape2D_jkv2x")
 
-[node name="Partitura" type="Node2D" parent="."]
-position = Vector2(2, 4)
+[node name="Partitura" type="Node2D" parent="." groups=["relics"]]
+position = Vector2(4551, -1224)
 script = ExtResource("1_ccsjf")
 relic_id = "partitura"
 relic_name = "Partitura rota"
 relic_description = "Partitura rota"
 
 [node name="Partitura" type="Sprite2D" parent="Partitura"]
-position = Vector2(4476.67, -1087.33)
+position = Vector2(-3, 6)
 scale = Vector2(0.141937, 0.141937)
 texture = ExtResource("9_vlgmj")
 
 [node name="PointLight2D" type="PointLight2D" parent="Partitura/Partitura"]
-position = Vector2(-7.04526, -35.2268)
+position = Vector2(-35.2246, 21.1362)
 scale = Vector2(1.93867, 1.89018)
 texture = ExtResource("3_vjumb")
 script = ExtResource("4_7fo22")
 
 [node name="Area2D" type="Area2D" parent="Partitura"]
-position = Vector2(4479.67, -1082.33)
+position = Vector2(21, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Partitura/Area2D"]
-position = Vector2(-10, -11)
+position = Vector2(-22, 11)
 shape = SubResource("CircleShape2D_vjumb")
 
-[node name="Foto" type="Node2D" parent="."]
+[node name="Foto" type="Node2D" parent="." groups=["relics"]]
 position = Vector2(4956, 780)
 script = ExtResource("1_ccsjf")
 relic_id = "foto_quemada"
@@ -221,7 +221,8 @@ script = ExtResource("4_7fo22")
 position = Vector2(204, 65)
 shape = SubResource("RectangleShape2D_7fo22")
 
-[node name="Celular" type="Node2D" parent="."]
+[node name="Celular" type="Node2D" parent="." groups=["relics"]]
+position = Vector2(571, -6025)
 scale = Vector2(0.142, 0.142)
 script = ExtResource("1_ccsjf")
 relic_id = "celular"
@@ -229,23 +230,24 @@ relic_name = "celular"
 relic_description = "celular"
 
 [node name="Celular" type="Sprite2D" parent="Celular"]
-position = Vector2(2314.82, -22537.3)
+position = Vector2(169.014, 35.2109)
 texture = ExtResource("11_7fo22")
 
 [node name="PointLight2D" type="PointLight2D" parent="Celular/Celular"]
-position = Vector2(-12, -61.2981)
+position = Vector2(-7.04218, -126.761)
 scale = Vector2(2.75776, 2.57207)
 texture = ExtResource("3_vjumb")
 script = ExtResource("4_7fo22")
 
 [node name="Area2D" type="Area2D" parent="Celular"]
-position = Vector2(2350.03, -22558.4)
+position = Vector2(-63.3799, 42.252)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Celular/Area2D"]
-position = Vector2(-33.1265, 23.2151)
+position = Vector2(140.845, -91.5476)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ryso8")
 
-[node name="Pluma" type="Node2D" parent="."]
+[node name="Pluma" type="Node2D" parent="." groups=["relics"]]
 position = Vector2(3839, -1602)
 script = ExtResource("1_ccsjf")
 relic_id = "pluma"

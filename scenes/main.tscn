@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://jkn0wca1u47u"]
+[gd_scene load_steps=17 format=4 uid="uid://jkn0wca1u47u"]
 
 [ext_resource type="PackedScene" uid="uid://b3as7ugojrfxp" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://dqdd5wxu8d6ps" path="res://assets/art/1. Limbo/floor/piso_hospital v4.png" id="1_sugp2"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bx7woo2xl0ty" path="res://scenes/clues/clock_hint.tscn" id="6_trceg"]
 [ext_resource type="PackedScene" uid="uid://bu8ay102afkod" path="res://scenes/relics/relics.tscn" id="7_tipki"]
 [ext_resource type="PackedScene" uid="uid://basm0bs4le6hu" path="res://scenes/tutorial_ui.tscn" id="14_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://78sgj7gr0gbf" path="res://scenes/clues/MusicPartitura.tscn" id="14_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://daryg6b4ts4x5" path="res://scenes/hud.tscn" id="14_jkv2x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbgi4"]
@@ -67,3 +68,5 @@ color = Color(0.11, 0.11, 0.11, 1)
 [node name="TutorialUI" parent="." instance=ExtResource("14_a8y0u")]
 
 [node name="Tictac" parent="." instance=ExtResource("3_eb6dy")]
+
+[node name="PartituraHint" parent="." instance=ExtResource("14_jbj1t")]

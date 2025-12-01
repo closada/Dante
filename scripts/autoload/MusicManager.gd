@@ -121,3 +121,20 @@ func is_playing() -> bool:
 func _on_player_finished():
 	if loop_music and current_track != "":
 		player.play()
+
+func fade_out_music(duration := 1.0):
+	var start = volumen_actual
+	var t := 0.0
+	var tween = get_tree().create_tween()
+
+	tween.tween_method(self._set_music_volume_percent, 1.0, 0.0, duration)
+
+func fade_in_music(duration := 1.0):
+	var target = volumen_actual
+	var tween = get_tree().create_tween()
+	tween.tween_method(self._set_music_volume_percent, 0.0, 1.0, duration)
+
+func _set_music_volume_percent(percent: float):
+	var db = linear_to_db(volumen_actual * percent)
+	player.volume_db = db
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("MasterMusic"), db)

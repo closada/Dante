@@ -5,7 +5,8 @@ const SFX_PATHS := {
 	"relic_pickup": "res://assets/audio/relic.wav",
 	"elevator_open": "res://assets/audio/elevator.mp3",
 	"click": "res://assets/audio/click.ogg",
-	"tictac_hint": "res://assets/audio/clues/tic-tac-1.mp3"
+	"tictac_hint": "res://assets/audio/clues/tic-tac-1.mp3",
+	"partitura_hint": "res://assets/audio/clues/partituras_music.wav"
 }
 
 var currently_playing := {}
