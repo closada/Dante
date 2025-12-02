@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://jkn0wca1u47u"]
+[gd_scene load_steps=21 format=4 uid="uid://jkn0wca1u47u"]
 
 [ext_resource type="PackedScene" uid="uid://b3as7ugojrfxp" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://dqdd5wxu8d6ps" path="res://assets/art/1. Limbo/floor/piso_hospital v4.png" id="1_sugp2"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://rfxj06mr0n68" path="res://scenes/clues/ride.tscn" id="5_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://bx7woo2xl0ty" path="res://scenes/clues/clock_hint.tscn" id="6_trceg"]
 [ext_resource type="PackedScene" uid="uid://bu8ay102afkod" path="res://scenes/relics/relics.tscn" id="7_tipki"]
+[ext_resource type="PackedScene" uid="uid://27qmt32eiqh6" path="res://scenes/clues/final.tscn" id="9_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://ca10iluqohhho" path="res://scenes/clues/cable_celular.tscn" id="11_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://basm0bs4le6hu" path="res://scenes/tutorial_ui.tscn" id="14_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://78sgj7gr0gbf" path="res://scenes/clues/MusicPartitura.tscn" id="14_jbj1t"]
@@ -79,3 +80,5 @@ color = Color(0.11, 0.11, 0.11, 1)
 [node name="FlashHint" parent="." instance=ExtResource("15_jkv2x")]
 
 [node name="ShadowHint" parent="." instance=ExtResource("17_muem4")]
+
+[node name="Final" parent="." instance=ExtResource("9_dp3eg")]

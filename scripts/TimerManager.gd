@@ -1,6 +1,6 @@
 extends Node
 
-@export var tiempo_inicial: int = 90 # 5 minutos = 300 segundos
+@export var tiempo_inicial: int = 17 # 5 minutos = 300 segundos
 @export var bonus_por_reliquia: int = 30
 var aviso_tiempo_bajo := false 
 
@@ -55,6 +55,8 @@ func _on_timer_tick():
 		# 🔸 Si el tiempo llegó a cero, fin del nivel
 		if tiempo_restante < 0:
 			_tiempo_agotado()
+			# poner sonido de poco tiempo
+			SFXManager.start_low_time_warning()
 			return
 
 		# 🔸 Actualizar texto del temporizador
@@ -73,6 +75,10 @@ func _on_timer_tick():
 				virgilio.mostrar_mensaje("tiempo_bajo")
 			else:
 				print("⚠️ Virgilio no encontrado para advertencia de tiempo.")
+		
+		if tiempo_restante <= 15:
+			SFXManager.play("poco_tiempo_tick")
+			
 
 
 func _on_relic_collected(_id: String):
@@ -82,6 +88,9 @@ func _on_relic_collected(_id: String):
 	if tiempo_restante > 30:
 		ui_label.add_theme_color_override("font_color", Color.WHITE)
 		aviso_tiempo_bajo = false
+	
+	if tiempo_restante > 15:
+		SFXManager.stop_low_time_warning()
 
 
 # --- GAME OVER ---

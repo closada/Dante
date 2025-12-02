@@ -126,6 +126,9 @@ func _process(_delta):
 	var target := find_relic_by_id("partitura")
 	if not target:
 		return
+		
+	if Inventory.get_active_relic_id_num() != relic_number:
+		return
 
 	var dist = player.global_position.distance_to(target.global_position)
 

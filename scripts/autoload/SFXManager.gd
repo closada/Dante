@@ -6,8 +6,13 @@ const SFX_PATHS := {
 	"elevator_open": "res://assets/audio/elevator.mp3",
 	"click": "res://assets/audio/click.ogg",
 	"tictac_hint": "res://assets/audio/clues/tic-tac-1.mp3",
-	"partitura_hint": "res://assets/audio/clues/partituras_music.wav"
+	"partitura_hint": "res://assets/audio/clues/partituras_music.wav",
+	"poco_tiempo": "res://assets/audio/poco_tiempo.mp3",
+	"poco_tiempo_tick": "res://assets/audio/poco_tiempo_tick.wav",
+	"poco_tiempo_fin": "res://assets/audio/poco_tiempo_fin.wav"
 }
+
+var low_time_player: AudioStreamPlayer = null
 
 var currently_playing := {}
 
@@ -59,3 +64,26 @@ func play(sfx_name: String) -> void:
 	# 🔹 Liberarlo automáticamente cuando termine
 	sound.finished.connect(func():
 		sound.queue_free())
+
+func start_low_time_warning():
+	if low_time_player and low_time_player.playing:
+		return
+
+	low_time_player = AudioStreamPlayer.new()
+	low_time_player.bus = "SFX"
+	low_time_player.stream = load(SFX_PATHS["poco_tiempo_fin"])
+
+
+
+	# Asegurar que respete el árbol de pausa
+	low_time_player.process_mode = Node.PROCESS_MODE_PAUSABLE
+
+	get_tree().current_scene.add_child(low_time_player)
+	low_time_player.play()
+
+
+func stop_low_time_warning():
+	if low_time_player:
+		low_time_player.stop()
+		low_time_player.queue_free()
+		low_time_player = null

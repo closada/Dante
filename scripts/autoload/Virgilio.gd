@@ -18,7 +18,7 @@ var mensajes := {
 	"partitura": "La música no desapareció Dante...",
 	"foto_quemada": "Te estaban esperando, Dante. Ibas a verlos.",
 	"celular": "Sonó. No lo atendiste.",
-	"pluma": "Has superado la primera prueba... pero el juicio continúa.",
+	"pluma": "Has superado la primera prueba... pero el juicio continúa. Debes encontrar el ascensor.",
 	"ascensor": "Has superado la primera prueba... pero el juicio continúa.",
 	"tiempo_bajo": "¡Apurate, Dante! El tiempo se está agotando..."
 }

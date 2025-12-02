@@ -74,6 +74,10 @@ func _show_fin_nivel_ui() -> void:
 
 func _on_menu_pressed() -> void:
 	SFXManager.play("click")
+	print("🏠 Volviendo al menú principal...")
+	var inv = get_node_or_null("/root/Inventory")
+	if inv:
+		inv.reset_progress()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
