@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b4iksx6jwgqpt"]
+
+[ext_resource type="FontFile" uid="uid://ca608i1d6iyw8" path="res://assets/TrajanPro-Bold.otf" id="1_7f25u"]
+
+[resource]
+Button/fonts/font = ExtResource("1_7f25u")
+Label/font_sizes/font_size = 14
+Label/fonts/font = ExtResource("1_7f25u")
+LineEdit/fonts/font = ExtResource("1_7f25u")
+TextEdit/fonts/font = ExtResource("1_7f25u")

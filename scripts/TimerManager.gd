@@ -1,6 +1,6 @@
 extends Node
 
-@export var tiempo_inicial: int = 17 # 5 minutos = 300 segundos
+@export var tiempo_inicial: int = 90 # 5 minutos = 300 segundos
 @export var bonus_por_reliquia: int = 30
 var aviso_tiempo_bajo := false 
 

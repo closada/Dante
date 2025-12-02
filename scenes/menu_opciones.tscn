@@ -72,7 +72,7 @@ alignment = 1
 [node name="Label" type="Label" parent="VBoxContainer/Musica"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "Música:"
 
 [node name="MusicSlider" type="HSlider" parent="VBoxContainer/Musica"]
@@ -88,7 +88,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/efectos"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "Efectos: "
 
 [node name="SFXSlider" type="HSlider" parent="VBoxContainer/efectos"]
@@ -104,7 +104,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/Idioma"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Idioma:"
 
 [node name="op" type="HBoxContainer" parent="VBoxContainer/Idioma"]
@@ -113,12 +113,12 @@ theme_override_constants/separation = 16
 
 [node name="es" type="Button" parent="VBoxContainer/Idioma/op"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
 text = "Español"
 
 [node name="in" type="Button" parent="VBoxContainer/Idioma/op"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
 disabled = true
 text = "Ingles"
 
@@ -127,7 +127,7 @@ layout_mode = 2
 
 [node name="Button" type="Button" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 20
 text = "Volver atras"
 
 [connection signal="value_changed" from="VBoxContainer/Musica/MusicSlider" to="." method="_on_music_slider_value_changed"]

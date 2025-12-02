@@ -244,7 +244,6 @@ position = Vector2(-63.3799, 42.252)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Celular/Area2D"]
 position = Vector2(140.845, -91.5476)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ryso8")
 
 [node name="Pluma" type="Node2D" parent="." groups=["relics"]]

@@ -34,6 +34,10 @@ window/stretch/mode="canvas_items"
 
 relics=""
 
+[gui]
+
+theme/custom="uid://b4iksx6jwgqpt"
+
 [input]
 
 ui_left={
